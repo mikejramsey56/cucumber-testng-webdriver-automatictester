@@ -1,0 +1,5 @@
+#Maven generated files
+target/
+
+# CLI executables
+src/main/java/runner/cli/*.class
