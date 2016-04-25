@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Test runner" parallel="classes" thread-count="2">
+<suite name="Test runner" parallel="classes" thread-count="1">
     <test name="Package with subpackages">
         <packages>
             <package name="automatictester.jwebfwk.runners.*"/>

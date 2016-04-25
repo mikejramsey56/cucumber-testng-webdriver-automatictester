@@ -31,6 +31,26 @@ public class StepDefinitions extends ParentScenario {
     public void I_should_see_download_link_on_download_page(String linkText) {
         assertThat(downloadPage.hasDownloadLinkFor(linkText), is(true));
     }
+    
+    @Given("^I am a first step$")
+    public void i_am_first_step() {
+    	System.out.println("First step executed");
+    }
+    
+    @Then("^I am a second step$")
+    public void i_am_second_step() {
+    	System.out.println("Second step executed");
+    }
+    
+    @Given("^I am a copy of first step$")
+    public void i_am_copy_of_first_step() {
+    	System.out.println("First step copy executed");
+    }
+    
+    @Then("^I am a copy of second step$")
+    public void i_am_copy_of_second_step() {
+    	System.out.println("Second step copy executed");
+    }
 
     @After
     public void afterScenario() {
