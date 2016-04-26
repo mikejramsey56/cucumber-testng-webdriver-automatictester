@@ -50,3 +50,6 @@ The second goal is to override cucumber options without changing the cucumber Te
 I executed the modified run configuration and it worked.  I ran just the *@orig* tag then only the *@copy* tag.  Each time it worked exactly as expected.
 
 Notice that you specify the cucumber options differently in *-Dcucumber.options* then when using the *@CucumberOptions* annotation.  The syntax required in *-Dcucumber.options* is explained [here](https://github.com/cucumber/cucumber-jvm/blob/0aecc4d3e4c15fc34b63f848043deba2c230e35f/core/src/main/resources/cucumber/api/cli/USAGE.txt).
+
+###Reporting###
+The TestNG runner is in control and expects a static **@Test** annotation before each test.  Cucumber is invoking the tests dynamically so only the first test registers, and the names come form the testng.xml file.  Conclusion: the reporting is abysmal.  TO-DO: Do dynamically what TestNG is doing statically.
